@@ -16,11 +16,13 @@ int LDRDC = A0;             // Inicia LDRDC no pino A0
 int LDRDB = A1;             // Inicia LDRDB no pino A1
 int LDREC = A2;             // Inicia LDREC no pino A2
 int LDREB = A3;             // Inicia LDREB no pino A3
+int LDRLed = A4;
  
 void setup()  {
   Serial.begin(9600);
   Horizontal.attach(10);     // Inicia servo Horizontal na porta 10
   Vertical.attach(9);       // Inicia servo Vertical na porta 9
+  pinMode(LDRLed, OUTPUT);
  
   for (int x = 45; x <= 90; x++) { // Inicia servo Horizontal na posição 90 aos poucos
    Serial.println("Posicionando Horizontal = "); 
@@ -52,6 +54,13 @@ void loop() {
  
   int DifSupInf = ValorSup - ValorInf;      // Diferença entre LED superior e inferior
   int DifDirEsq = ValorDir - ValorEsq;      // Diferença entre LED direita e esquerda
+
+  // Read the light level on A4 and control the LED accordingly
+  if (LDC + LEC + LDB + LEB > 2140) {
+    digitalWrite(LDRLed, HIGH);  // Turn on the LED if the light level is below 512
+  } else {
+    digitalWrite(LDRLed, LOW);   // Turn off the LED if the light level is above 512
+  }
  
   /*---------------------------------------------------*/
  
