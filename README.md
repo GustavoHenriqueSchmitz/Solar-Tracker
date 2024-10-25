@@ -1,7 +1,12 @@
 # Solar Tracker With Arduino
 
-It`s a school project, where we created a model of solar energy generation, using arduino for some automations.
-The arduino control a system that according the ambient light, move the solar boards and turn on or turn off the leds.
+## About the project
+It`s a school project, where we created a model of solar energy generation, using arduino.
+The arduino control a system that according the ambient light, move the solar boards and turn on or turn off leds.
+
+## Used Technologies
+- C++
+- Arduino
 
 ## Images
 
@@ -13,3 +18,10 @@ The arduino control a system that according the ambient light, move the solar bo
 
 ### Arduino and Connections - Finished
 ![image](https://github.com/user-attachments/assets/b0c255ff-ef34-419b-a2de-7b2066a7f74d)
+
+## Author
+**Gustavo Henrique Schmitz**
+
+**Linkedin:** https://www.linkedin.com/in/gustavo-henrique-schmitz  
+**Portfolio:** https://gustavohenriqueschmitz.com  
+**Email:** gustavohenriqueschmitz568@gmail.com  
